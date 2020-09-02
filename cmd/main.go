@@ -18,7 +18,7 @@ type Message struct {
 }
 
 func main() {
-	fs := http.FileServer(http.Dir("../public"))
+	fs := http.FileServer(http.Dir("public"))
 	http.Handle("/", fs)
 	http.HandleFunc("/ws", handleConnections)
 
