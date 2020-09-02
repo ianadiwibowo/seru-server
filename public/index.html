@@ -7,7 +7,7 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/emojione@4.5.0/lib/js/emojione.min.js" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/emojione@4.5.0/extras/css/emojione.min.css" />
   <link rel="stylesheet" href="/style.css" />
 </head>
 
@@ -42,6 +42,9 @@
       <div class="input-field col s8">
         <input type="email" v-model.trim="email" placeholder="Email" />
       </div>
+      <div class="input-field col s8">
+        <input type="text" v-model.trim="username" placeholder="Username">
+      </div>
       <div class="input-field col s4">
         <button class="waves-effect waves-light btn" @click="join()">
           <i class="material-icons right">done</i>
@@ -51,9 +54,8 @@
     </div>
   </main>
   <script src="https://unpkg.com/vue@2.6.12/dist/vue.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/emojione/4.5.0/lib/js/emojione.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/md5.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emojione@4.5.0/lib/js/emojione.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="/app.js"></script>
 </body>
