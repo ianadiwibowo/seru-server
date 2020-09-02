@@ -3,7 +3,7 @@ new Vue({
 
   data: {
     ws: null, // Our websocket
-    newMsg: '', // Holds new messages to be sent to the server
+    newMessage: '', // Holds new messages to be sent to the server
     chatContent: '', // A running list of chat messages displayed on the screen
     email: null, // Email address used for grabbing an avatar
     username: null, // Our username
@@ -25,15 +25,15 @@ new Vue({
   },
   methods: {
     send: function () {
-      if (this.newMsg != '') {
+      if (this.newMessage != '') {
         this.ws.send(
           JSON.stringify({
             email: this.email,
             username: this.username,
-            message: $('<p>').html(this.newMsg).text() // Strip out html
+            message: $('<p>').html(this.newMessage).text() // Strip out html
           }
           ));
-        this.newMsg = ''; // Reset newMsg
+        this.newMessage = ''; // Reset newMessage
       }
     },
     join: function () {
